@@ -5,7 +5,9 @@
 }
 
 .header {
-    background-color: var(--color-primary);
+    background: linear-gradient(rgba(47, 82, 51, 0.9), rgba(47, 82, 51, 0.9)), url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
     color: var(--color-text-inverse);
     padding: var(--spacing-xl) 0;
     text-align: center;

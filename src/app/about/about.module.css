@@ -1,0 +1,101 @@
+.aboutPage {
+    min-height: 100vh;
+}
+
+.hero {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.mission {
+    padding: var(--spacing-xl) 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.content h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.content p {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+}
+
+.imageWrapper {
+    height: 400px;
+    background-color: #eee;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.placeholderImage {
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    /* Replacing with color since we don't have images yet */
+}
+
+.team {
+    background-color: var(--color-background);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.teamCard {
+    background: var(--color-surface);
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.teamImage {
+    height: 200px;
+    background-color: #ccc;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

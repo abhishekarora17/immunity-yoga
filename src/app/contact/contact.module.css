@@ -1,0 +1,135 @@
+.page {
+    background-color: var(--color-background);
+    min-height: 100vh;
+    padding-bottom: var(--spacing-xl);
+}
+
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+.infoItem {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.iconWrapper {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(47, 82, 51, 0.1);
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.infoItem h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.infoItem p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.map {
+    margin-top: var(--spacing-lg);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px;
+    background-color: #eee;
+}
+
+.mapPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-weight: 600;
+    background-color: #e9ecef;
+}
+
+.formWrapper {
+    background-color: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.formWrapper h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.formGroup {
+    margin-bottom: var(--spacing-md);
+}
+
+.formGroup label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+}
+
+.submitButton {
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

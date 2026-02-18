@@ -1,0 +1,155 @@
+.page {
+    background-color: var(--color-background);
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+.pricing {
+    padding: var(--spacing-xl) 0;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: center;
+    /* Center items vertically if they have different heights */
+}
+
+.card {
+    background: var(--color-surface);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.recommended {
+    transform: scale(1.05);
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 10px 40px rgba(255, 107, 107, 0.15);
+    z-index: 1;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-secondary);
+    color: var(--color-text-inverse);
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.planName {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.priceWrapper {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.period {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-secondary);
+}
+
+.checkIcon {
+    color: var(--color-secondary);
+    flex-shrink: 0;
+}
+
+.button {
+    width: 100%;
+}
+
+.faq {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-surface);
+}
+
+.faqTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.faqItem h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.faqItem p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .recommended {
+        transform: none;
+        order: -1;
+        /* Keep recommended at top on mobile */
+    }
+}

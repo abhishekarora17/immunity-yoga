@@ -1,0 +1,70 @@
+.testimonials {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-surface);
+    /* Distinct background */
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+    text-align: center;
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.card {
+    background: var(--color-background);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-secondary);
+    color: var(--color-text-inverse);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.role {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+}

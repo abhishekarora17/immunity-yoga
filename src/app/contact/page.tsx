@@ -50,10 +50,16 @@ export default function Contact() {
                         </div>
 
                         <div className={styles.map}>
-                            {/* Placement for map integration */}
-                            <div className={styles.mapPlaceholder}>
-                                Interactive Map Coming Soon
-                            </div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.837332212662!2d75.9189445!3d30.8906969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a830d6f9a0d85%3A0x6b4f7b6b8b8b8b8b!2sUrban%20Estate%20Phase%201%2C%20Jamalpur%2C%20Ludhiana%2C%20Punjab%20141010!5e0!3m2!1sen!2sin!4v1708430000000!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Google Map of Immunity Yoga and Gym Studio"
+                            ></iframe>
                         </div>
                     </div>
 

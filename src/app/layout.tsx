@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://immunityyogaandgym.com',
+    url: 'https://immunity-yoga.vercel.app',
     siteName: 'Immunity Yoga and Gym Studio',
     title: 'Immunity Yoga and Gym Studio | Best Yoga & Gym in Ludhiana',
     description: 'Join the best yoga and fitness studio in Ludhiana. Offering Hatha Yoga, Vinyasa, Power Yoga, and modern gym facilities.',
     images: [
       {
-        url: 'https://immunityyogaandgym.com/og-image.jpg', // Placeholder
+        url: 'https://immunity-yoga.vercel.app/og-image.jpg', // Placeholder
         width: 1200,
         height: 630,
         alt: 'Immunity Yoga and Gym Studio',

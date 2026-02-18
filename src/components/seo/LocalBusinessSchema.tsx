@@ -3,9 +3,9 @@ export default function LocalBusinessSchema() {
         '@context': 'https://schema.org',
         '@type': 'ExerciseGym',
         name: 'Immunity Yoga and Gym Studio',
-        image: 'https://immunityyogaandgym.com/images/hero.jpg', // Placeholder image URL
-        '@id': 'https://immunityyogaandgym.com',
-        url: 'https://immunityyogaandgym.com',
+        image: 'https://immunity-yoga.vercel.app/images/hero.jpg', // Placeholder image URL
+        '@id': 'https://immunity-yoga.vercel.app',
+        url: 'https://immunity-yoga.vercel.app',
         telephone: '+919876543210',
         address: {
             '@type': 'PostalAddress',

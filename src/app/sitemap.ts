@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://immunityyogaandgym.com';
+    const baseUrl = 'https://immunity-yoga.vercel.app';
 
     return [
         {

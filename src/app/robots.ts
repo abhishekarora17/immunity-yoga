@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://immunityyogaandgym.com/sitemap.xml',
+        sitemap: 'https://immunity-yoga.vercel.app/sitemap.xml',
     };
 }

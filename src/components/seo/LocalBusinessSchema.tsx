@@ -17,8 +17,8 @@ export default function LocalBusinessSchema() {
         },
         geo: {
             '@type': 'GeoCoordinates',
-            latitude: '30.9010', // Approximate lat for Jamalpur, Ludhiana
-            longitude: '75.8573', // Approximate lon for Jamalpur, Ludhiana
+            latitude: '30.901229', // Approximate lat for Jamalpur, Ludhiana
+            longitude: '75.9113081', // Approximate lon for Jamalpur, Ludhiana
         },
         openingHoursSpecification: [
             {

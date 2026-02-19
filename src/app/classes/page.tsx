@@ -2,7 +2,7 @@ import styles from './classes.module.css';
 
 export const metadata = {
     title: 'Classes & Schedule | Immunity Yoga and Gym Studio',
-    description: 'Explore our diverse range of yoga and fitness classes designed for all levels.',
+    description: 'Explore our yoga and fitness classes designed exclusively for women and children in Ludhiana.',
 };
 
 const classTypes = [
@@ -10,37 +10,37 @@ const classTypes = [
         title: 'Hatha Yoga',
         time: '60 min',
         intensity: 'Low',
-        description: 'A gentle introduction to basic yoga postures. Focuses on alignment and breathing.',
+        description: 'A gentle, beginner-friendly introduction to yoga postures. Perfect for women of all ages.',
     },
     {
         title: 'Vinyasa Flow',
         time: '75 min',
         intensity: 'Medium',
-        description: 'Dynamic sequence of poses that synchronizes breath with movement.',
+        description: 'Dynamic sequences that synchronize breath with movement — great for building flow and flexibility.',
     },
     {
         title: 'Power Yoga',
         time: '60 min',
         intensity: 'High',
-        description: 'A vigorous fitness-based approach to vinyasa-style yoga.',
+        description: 'A vigorous fitness-based yoga session to build strength, tone, and stamina.',
     },
     {
         title: 'HIIT Cardio',
         time: '45 min',
         intensity: 'High',
-        description: 'High-Intensity Interval Training to boost endurance and burn calories.',
+        description: 'High-Intensity Interval Training designed for women to boost endurance and burn calories effectively.',
     },
     {
         title: 'Strength Training',
         time: '60 min',
         intensity: 'Medium/High',
-        description: 'Build muscle and strength using free weights and resistance machines.',
+        description: 'Build strength and confidence using free weights and resistance equipment in a women-only zone.',
     },
     {
         title: 'Meditation',
         time: '30 min',
         intensity: 'Low',
-        description: 'Guided mindfulness practice to reduce stress and improve mental clarity.',
+        description: 'Guided mindfulness sessions to reduce stress, improve sleep, and restore mental clarity.',
     },
 ];
 
@@ -50,7 +50,7 @@ export default function Classes() {
             <header className={styles.header}>
                 <div className={styles.container}>
                     <h1 className={styles.title}>Our Classes</h1>
-                    <p className={styles.subtitle}>Find the perfect class to match your goals and energy level.</p>
+                    <p className={styles.subtitle}>Specially designed for women & children — led by Rachna Arora.</p>
                 </div>
             </header>
 

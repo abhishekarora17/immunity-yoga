@@ -5,9 +5,9 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <div className={styles.column}>
-                    <h3>Immunity Yoga</h3>
-                    <p>Empowering you to live a healthier, stronger life through yoga and fitness.</p>
+                <div className={styles.brand}>
+                    <span className={styles.brandName}>Immunity Yoga & Gym Studio</span>
+                    <p>Empowering lives through mindful movement and holistic fitness in the heart of Ludhiana.</p>
                 </div>
                 <div className={styles.column}>
                     <h3>Quick Links</h3>
@@ -20,24 +20,17 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className={styles.column}>
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li> H. No 1134, New Jyoti Colony, Street No. 14, near Dream park, Urban Estate Phase 1, Jamalpur, Ludhiana, Punjab 141003</li>
-                        <li>immunityyogaandgymstudio@gmail.com</li>
-                        <li>+91 9815603036</li>
-                    </ul>
-                </div>
-                <div className={styles.column}>
                     <h3>Follow Us</h3>
                     <ul>
-                        <li><a href="https://www.instagram.com/immunity_yoga_and_gym/" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/@immunityyogaandgymstudio" target="_blank">Youtube</a></li>
-                        <li><a href="https://www.facebook.com/immunityyogastudio/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/immunity_yoga_and_gym/" target="_blank" rel="noreferrer">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@immunityyogaandgymstudio" target="_blank" rel="noreferrer">Youtube</a></li>
+                        <li><a href="https://www.facebook.com/immunityyogastudio/" target="_blank" rel="noreferrer">Facebook</a></li>
                     </ul>
                 </div>
             </div>
             <div className={styles.copyright}>
-                &copy; {new Date().getFullYear()} Immunity Yoga. All rights reserved.
+                <span>&copy; {new Date().getFullYear()} Immunity Yoga & Gym Studio. All rights reserved.</span>
+                <span>Ludhiana, Punjab, India</span>
             </div>
         </footer>
     );

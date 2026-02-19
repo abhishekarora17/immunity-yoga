@@ -1,61 +1,81 @@
 .hero {
     position: relative;
-    height: 90vh;
-    min-height: 600px;
+    height: 95vh;
+    min-height: 650px;
     background-image: url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2069&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--color-text-inverse);
+    overflow: hidden;
 }
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(18, 30, 18, 0.5) 0%,
+            rgba(18, 30, 18, 0.7) 60%,
+            rgba(18, 30, 18, 0.85) 100%);
 }
 
 .content {
     position: relative;
     z-index: 1;
-    max-width: 800px;
-    padding: 0 var(--spacing-sm);
-    animation: fadeIn 1s ease-out;
+    max-width: 860px;
+    padding: 0 var(--spacing-md);
+    animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.95;
 }
 
 .title {
-    font-size: 3.5rem;
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 800;
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.1;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.08;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
 }
 
 .subtitle {
-    font-size: 1.25rem;
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-weight: 400;
     margin-bottom: var(--spacing-lg);
-    color: #e9ecef;
-    max-width: 600px;
+    color: rgba(255, 255, 255, 0.87);
+    max-width: 580px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.75;
 }
 
 .actions {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(36px);
     }
 
     to {
@@ -65,12 +85,14 @@
 }
 
 @media (max-width: 768px) {
-    .title {
-        font-size: 2.5rem;
+    .hero {
+        background-attachment: scroll;
+        height: 100svh;
     }
 
     .actions {
         flex-direction: column;
-        gap: var(--spacing-sm);
+        align-items: center;
+        gap: var(--spacing-xs);
     }
 }

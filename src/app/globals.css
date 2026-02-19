@@ -1,27 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
   /* Color System */
   --color-primary: #2F5233;
-  /* Deep Forest Green */
   --color-primary-light: #507D55;
   --color-primary-dark: #1E3823;
+  --color-primary-gradient: linear-gradient(135deg, #2F5233, #507D55);
 
   --color-secondary: #FF6B6B;
-  /* Energetic Coral */
-  --color-secondary-hover: #FF8787;
+  --color-secondary-hover: #FF5252;
+  --color-secondary-glow: rgba(255, 107, 107, 0.35);
 
   --color-accent: #F9D56E;
-  /* Gold/Sand */
+  --color-accent-dark: #E0B830;
 
-  --color-background: #F4F4F9;
-  /* Soft Off-White */
+  --color-background: #F3F4F0;
   --color-surface: #FFFFFF;
+  --color-surface-glass: rgba(255, 255, 255, 0.85);
 
-  --color-text-primary: #333333;
-  --color-text-secondary: #666666;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #555F6E;
+  --color-text-muted: #9CA3AF;
   --color-text-inverse: #FFFFFF;
 
-  --color-footer-bg: #1A1A1D;
-  /* Dark Grey */
+  --color-footer-bg: #111318;
+  --color-border: rgba(0, 0, 0, 0.08);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -31,16 +34,29 @@
   --spacing-xl: 8rem;
 
   /* Typography */
-  --font-heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Layout */
   --max-width: 1200px;
   --header-height: 80px;
 
+  /* Effects */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.06);
+  --shadow-glow-primary: 0 8px 32px rgba(47, 82, 51, 0.3);
+  --shadow-glow-secondary: 0 8px 32px rgba(255, 107, 107, 0.35);
+
   /* Animation */
-  --transition-fast: 0.2s ease;
-  --transition-medium: 0.4s ease;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -56,7 +72,9 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-background);
   color: var(--color-text-primary);
-  line-height: 1.6;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -73,10 +91,12 @@ h6 {
   font-family: var(--font-heading);
   line-height: 1.2;
   margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary);
+  font-weight: 700;
 }
 
 button {
-  font-family: inherit;
+  font-family: var(--font-body);
   cursor: pointer;
   border: none;
   background: none;
@@ -93,11 +113,23 @@ button {
   padding: var(--spacing-lg) 0;
 }
 
+/* Section Heading Style */
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 
   to {
@@ -106,8 +138,31 @@ button {
   }
 }
 
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
 .animate-fade-in {
-  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .delay-100 {
@@ -120,4 +175,12 @@ button {
 
 .delay-300 {
   animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
 }

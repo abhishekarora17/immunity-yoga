@@ -3,19 +3,19 @@ import { Dumbbell, Flower2, Users } from 'lucide-react';
 
 const features = [
     {
-        icon: <Users size={40} />,
-        title: 'Expert Trainers',
-        description: 'Certified professionals dedicated to guiding your fitness journey.',
+        icon: <Users size={36} />,
+        title: 'Expert Instructor',
+        description: 'Led personally by certified instructor Rachna Arora — dedicated to your unique wellness journey.',
     },
     {
-        icon: <Dumbbell size={40} />,
-        title: 'Modern Equipment',
-        description: 'State-of-the-art gym facilities for all your workout needs.',
+        icon: <Dumbbell size={36} />,
+        title: 'Women-First Equipment',
+        description: "Gym facilities thoughtfully curated for women's strength, fitness and comfort.",
     },
     {
-        icon: <Flower2 size={40} />,
+        icon: <Flower2 size={36} />,
         title: 'Serene Yoga Studio',
-        description: 'A peaceful environment to reconnect with your inner self.',
+        description: 'A calm, welcoming space for women and children to reconnect with their breath and inner strength.',
     },
 ];
 
@@ -23,10 +23,12 @@ const Features = () => {
     return (
         <section className={styles.features}>
             <div className={styles.container}>
-                <h2 className={styles.heading}>Why Choose Updates</h2>
+                <span className={styles.eyebrow}>Why Choose Us</span>
+                <h2 className={styles.heading}>Everything You Need to Thrive</h2>
+                <p className={styles.subheading}>World-class facilities, expert coaches, and a community that supports you.</p>
                 <div className={styles.grid}>
                     {features.map((feature, index) => (
-                        <div key={index} className={`${styles.card} animate-fade-in`} style={{ animationDelay: `${index * 0.2}s` }}>
+                        <div key={index} className={`${styles.card} animate-fade-in`} style={{ animationDelay: `${index * 0.15}s` }}>
                             <div className={styles.iconWrapper}>
                                 {feature.icon}
                             </div>

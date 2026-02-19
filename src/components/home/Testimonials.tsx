@@ -2,30 +2,34 @@ import styles from './Testimonials.module.css';
 
 const testimonials = [
     {
-        name: 'Sarah Jenkins',
-        role: 'Yoga Enthusiast',
-        quote: 'Immunity Yoga has completely transformed my flexibility and mental clarity. The instructors are amazing!',
+        name: 'Simran Bhatia',
+        role: 'Yoga Member, Ludhiana',
+        quote: 'The women-only environment is exactly what I needed. Rachna ji is an incredible teacher — I feel stronger and more confident every week!',
     },
     {
-        name: 'Mike Ross',
-        role: 'Gym Member',
-        quote: 'The equipment is top-notch and the atmosphere is very motivating. Highly recommend!',
+        name: 'Gurpreet Kaur',
+        role: 'Gym Member, Jamalpur',
+        quote: "I love that I can bring my kids along. The facilities are great and Rachna ma'am ensures every session is personalised. Highly recommend!",
     },
     {
-        name: 'Emily Chen',
-        role: 'Wellness Advocate',
-        quote: 'A perfect balance of strength and serenity. I love coming here after a long work day.',
+        name: 'Manpreet Dhillon',
+        role: 'Wellness Member',
+        quote: 'Finally a studio that feels truly safe and supportive for women. The yoga and fitness combination is life-changing. 100% worth it!',
     },
 ];
+
+const stars = '★★★★★';
 
 const Testimonials = () => {
     return (
         <section className={styles.testimonials}>
             <div className={styles.container}>
-                <h2 className={styles.heading}>What Our Members Say</h2>
+                <span className={styles.eyebrow}>Happy Members</span>
+                <h2 className={styles.heading}>What Our Community Says</h2>
                 <div className={styles.grid}>
                     {testimonials.map((t, index) => (
-                        <div key={index} className={`${styles.card} animate-fade-in`} style={{ animationDelay: `${index * 0.2}s` }}>
+                        <div key={index} className={`${styles.card} animate-fade-in`} style={{ animationDelay: `${index * 0.15}s` }}>
+                            <div className={styles.stars}>{stars}</div>
                             <p className={styles.quote}>"{t.quote}"</p>
                             <div className={styles.author}>
                                 <div className={styles.avatar}>{t.name.charAt(0)}</div>

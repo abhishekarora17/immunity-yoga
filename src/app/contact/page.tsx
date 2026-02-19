@@ -45,7 +45,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h3>Email Us</h3>
-                                <p>hello@immunityyoga.com</p>
+                                <p>immunityyogaandgymstudio@gmail.com</p>
                             </div>
                         </div>
 

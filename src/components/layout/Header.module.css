@@ -97,8 +97,73 @@
     box-shadow: 0 12px 28px rgba(47, 82, 51, 0.4);
 }
 
+.menuButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.75);
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.menuButton:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+}
+
+.mobileNav {
+    border-top: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.25rem var(--spacing-md) var(--spacing-sm);
+}
+
+.mobileNavLinks {
+    list-style: none;
+}
+
+.mobileNavLink {
+    display: block;
+    padding: 0.7rem 0.25rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.mobileNavLinks li:last-child .mobileNavLink {
+    border-bottom: none;
+}
+
 @media (min-width: 768px) {
     .nav {
         display: block;
+    }
+
+    .menuButton {
+        display: none;
+    }
+
+    .mobileNav {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .ctaButton {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
     }
 }

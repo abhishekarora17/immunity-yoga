@@ -48,6 +48,7 @@
     font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 800;
     line-height: 1.08;
+    color: var(--color-text-inverse);
     margin-bottom: var(--spacing-md);
     text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;

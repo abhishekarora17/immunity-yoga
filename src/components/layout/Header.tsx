@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import styles from './Header.module.css';
 
@@ -9,6 +9,26 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const closeMenu = () => setIsMenuOpen(false);
+
+    useEffect(() => {
+        const closeOnScroll = () => {
+            setIsMenuOpen(false);
+        };
+
+        const closeOnDesktop = () => {
+            if (window.innerWidth >= 768) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('scroll', closeOnScroll, { passive: true });
+        window.addEventListener('resize', closeOnDesktop);
+
+        return () => {
+            window.removeEventListener('scroll', closeOnScroll);
+            window.removeEventListener('resize', closeOnDesktop);
+        };
+    }, []);
 
     return (
         <header className={styles.header}>
